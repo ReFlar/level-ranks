@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-System.register("reflar/leven-ranks/components/LevelBar", ["flarum/Component"], function (_export, _context) {
+System.register('reflar/leven-ranks/components/LevelBar', ['flarum/Component'], function (_export, _context) {
     "use strict";
 
     var Component, LevelBar;
@@ -18,7 +18,12 @@ System.register("reflar/leven-ranks/components/LevelBar", ["flarum/Component"], 
                 }
 
                 babelHelpers.createClass(LevelBar, [{
-                    key: "view",
+                    key: 'config',
+                    value: function config() {
+                        this.$().tooltip({ container: 'body' });
+                    }
+                }, {
+                    key: 'view',
                     value: function view() {
                         var user = this.props.post.user();
 
@@ -30,23 +35,23 @@ System.register("reflar/leven-ranks/components/LevelBar", ["flarum/Component"], 
                             expPercent = 100 / 135 * (expTotal - expLevel * 135);
 
                         return m(
-                            "div",
-                            { "class": "PostUser-level" },
+                            'div',
+                            { 'class': 'PostUser-level', title: expTotal + ' EXP' },
                             m(
-                                "div",
-                                { "class": "PostUser-levelNumber" },
-                                "Level ",
+                                'div',
+                                { 'class': 'PostUser-levelNumber' },
+                                'Level ',
                                 expLevel
                             ),
-                            m("div", { "class": "PostUser-bar PostUser-bar--empty" }),
-                            m("div", { "class": "PostUser-bar", "data-original-title": "RamonGuilherme edited 25 May", title: "dd", style: "width: " + expPercent + '%;' })
+                            m('div', { 'class': 'PostUser-bar PostUser-bar--empty' }),
+                            m('div', { 'class': 'PostUser-bar', style: "width: " + expPercent + '%;' })
                         );
                     }
                 }]);
                 return LevelBar;
             }(Component);
 
-            _export("default", LevelBar);
+            _export('default', LevelBar);
         }
     };
 });;
