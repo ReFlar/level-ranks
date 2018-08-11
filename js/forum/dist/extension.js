@@ -18,9 +18,6 @@ System.register("reflar/leven-ranks/components/LevelBar", ["flarum/Component"], 
                 }
 
                 babelHelpers.createClass(LevelBar, [{
-                    key: "init",
-                    value: function init() {}
-                }, {
                     key: "view",
                     value: function view() {
                         var user = this.props.post.user();

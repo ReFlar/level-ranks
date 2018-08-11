@@ -1,10 +1,6 @@
 import Component from 'flarum/Component';
 
 export default class LevelBar extends Component {
-    init() {
-
-    }
-
     view() {
         const user = this.props.post.user();
 
