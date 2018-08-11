@@ -55,17 +55,17 @@ System.register("reflar/leven-ranks/components/LevelBar", ["flarum/Component"], 
 });;
 'use strict';
 
-System.register('reflar/leven-ranks/main', ['flarum/app', 'flarum/components/PostUser', 'flarum/extend', 'reflar/leven-ranks/components/LevelBar'], function (_export, _context) {
+System.register('reflar/leven-ranks/main', ['flarum/app', 'flarum/extend', 'flarum/components/PostUser', 'reflar/leven-ranks/components/LevelBar'], function (_export, _context) {
   "use strict";
 
-  var app, PostUser, extend, LevelBar;
+  var app, extend, PostUser, LevelBar;
   return {
     setters: [function (_flarumApp) {
       app = _flarumApp.default;
-    }, function (_flarumComponentsPostUser) {
-      PostUser = _flarumComponentsPostUser.default;
     }, function (_flarumExtend) {
       extend = _flarumExtend.extend;
+    }, function (_flarumComponentsPostUser) {
+      PostUser = _flarumComponentsPostUser.default;
     }, function (_reflarLevenRanksComponentsLevelBar) {
       LevelBar = _reflarLevenRanksComponentsLevelBar.default;
     }],

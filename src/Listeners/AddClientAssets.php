@@ -14,9 +14,6 @@ class AddClientAssets
         $events->listen(ConfigureWebApp::class, [$this, 'addAssets']);
     }
 
-    /**
-     * @param ConfigureWebApp $app
-     */
     public function addAssets(ConfigureWebApp $app)
     {
         if ($app->isForum()) {

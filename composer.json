@@ -17,8 +17,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ReFlar/private-messages/issues",
-        "source": "https://github.com/ReFlar/private-messages"
+        "issues": "https://github.com/ReFlar/level-ranks/issues",
+        "source": "https://github.com/ReFlar/level-ranks"
     },
     "require": {
         "flarum/core": "^0.1.0-beta.7"
