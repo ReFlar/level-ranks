@@ -58,26 +58,26 @@ System.register('reflar/leven-ranks/components/LevelBar', ['flarum/Component'], 
 'use strict';
 
 System.register('reflar/leven-ranks/main', ['flarum/app', 'flarum/extend', 'flarum/components/PostUser', 'reflar/leven-ranks/components/LevelBar'], function (_export, _context) {
-  "use strict";
+	"use strict";
 
-  var app, extend, PostUser, LevelBar;
-  return {
-    setters: [function (_flarumApp) {
-      app = _flarumApp.default;
-    }, function (_flarumExtend) {
-      extend = _flarumExtend.extend;
-    }, function (_flarumComponentsPostUser) {
-      PostUser = _flarumComponentsPostUser.default;
-    }, function (_reflarLevenRanksComponentsLevelBar) {
-      LevelBar = _reflarLevenRanksComponentsLevelBar.default;
-    }],
-    execute: function () {
+	var app, extend, PostUser, LevelBar;
+	return {
+		setters: [function (_flarumApp) {
+			app = _flarumApp.default;
+		}, function (_flarumExtend) {
+			extend = _flarumExtend.extend;
+		}, function (_flarumComponentsPostUser) {
+			PostUser = _flarumComponentsPostUser.default;
+		}, function (_reflarLevenRanksComponentsLevelBar) {
+			LevelBar = _reflarLevenRanksComponentsLevelBar.default;
+		}],
+		execute: function () {
 
-      app.initializers.add('reflar-level-ranks', function (app) {
-        extend(PostUser.prototype, 'view', function (view) {
-          view.children.push(LevelBar.component(this.props));
-        });
-      });
-    }
-  };
+			app.initializers.add('reflar-level-ranks', function (app) {
+				extend(PostUser.prototype, 'view', function (view) {
+					view.children.push(LevelBar.component(this.props));
+				});
+			});
+		}
+	};
 });

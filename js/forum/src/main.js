@@ -4,7 +4,7 @@ import PostUser from 'flarum/components/PostUser';
 import LevelBar from 'reflar/leven-ranks/components/LevelBar';
 
 app.initializers.add('reflar-level-ranks', app => {
-  extend(PostUser.prototype, 'view', function (view) {
-    view.children.push(LevelBar.component(this.props))
-  });
+	extend(PostUser.prototype, 'view', function (view) {
+		view.children.push(LevelBar.component(this.props))
+	});
 });
