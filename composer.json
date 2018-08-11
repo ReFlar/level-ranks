@@ -27,7 +27,7 @@
         "flarum-extension": {
             "title": "ReFlar Level Ranks",
             "icon": {
-                "name": "comments",
+                "name": "percent",
                 "backgroundColor": "#f4f4f4",
                 "color": "#000"
             }
