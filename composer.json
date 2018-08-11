@@ -1,0 +1,41 @@
+{
+    "name": "reflar/level-ranks",
+    "description": "Add a level/expierence bar to your flarum Forum.",
+    "keywords": [
+        "extension",
+        "flarum",
+        "experience",
+        "level",
+        "xp"
+    ],
+    "type": "flarum-extension",
+    "authors": [
+        {
+            "name": "Shahiem Seymor",
+            "email": "s.seymor@live.nl",
+            "homepage": "http://shahiemseymor.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ReFlar/private-messages/issues",
+        "source": "https://github.com/ReFlar/private-messages"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.7"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ReFlar Level Ranks",
+            "icon": {
+                "name": "comments",
+                "backgroundColor": "#f4f4f4",
+                "color": "#000"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Reflar\\LevelRanks\\": "src/"
+        }
+    }
+}
