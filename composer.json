@@ -28,8 +28,8 @@
             "title": "ReFlar Level Ranks",
             "icon": {
                 "name": "percent",
-                "backgroundColor": "#f4f4f4",
-                "color": "#000"
+                "backgroundColor": "#263238",
+                "color": "#fff"
             }
         }
     },
