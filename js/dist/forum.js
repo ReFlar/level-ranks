@@ -194,17 +194,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/PostUser */ "flarum/components/PostUser");
 /* harmony import */ var flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var flarum_components_UserCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/UserCard */ "flarum/components/UserCard");
-/* harmony import */ var flarum_components_UserCard__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_UserCard__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_LevelBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/LevelBar */ "./src/forum/components/LevelBar.js");
-
+/* harmony import */ var _components_LevelBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/LevelBar */ "./src/forum/components/LevelBar.js");
 
 
 
 
 flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('reflar-level-ranks', function (app) {
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'view', function (view) {
-    view.children.push(_components_LevelBar__WEBPACK_IMPORTED_MODULE_4__["default"].component(this.props));
+    view.children.push(_components_LevelBar__WEBPACK_IMPORTED_MODULE_3__["default"].component(this.props));
   });
 });
 
@@ -240,17 +237,6 @@ module.exports = flarum.core.compat['app'];
 /***/ (function(module, exports) {
 
 module.exports = flarum.core.compat['components/PostUser'];
-
-/***/ }),
-
-/***/ "flarum/components/UserCard":
-/*!************************************************************!*\
-  !*** external "flarum.core.compat['components/UserCard']" ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['components/UserCard'];
 
 /***/ }),
 

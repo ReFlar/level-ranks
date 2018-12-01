@@ -1,7 +1,6 @@
 import app from 'flarum/app';
 import { extend } from 'flarum/extend';
 import PostUser from 'flarum/components/PostUser';
-import UserCard from 'flarum/components/UserCard'
 import LevelBar from './components/LevelBar';
 
 app.initializers.add('reflar-level-ranks', app => {
