@@ -8,8 +8,8 @@ export default class LevelBar extends Component {
     view() {
         const user = this.props.post.user();
 
-        let expComments = (user.commentsCount() - user.discussionsCount()) * 21,
-            expDiscussions = user.discussionsCount() * 33;
+        let expComments = (user.commentCount() - user.discussionCount()) * 21,
+            expDiscussions = user.discussionCount() * 33;
 
         let expTotal = expComments + expDiscussions,
             expLevel = Math.floor(expTotal / 135),

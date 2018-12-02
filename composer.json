@@ -21,13 +21,13 @@
         "source": "https://github.com/ReFlar/level-ranks"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.7"
+        "flarum/core": "^0.1.0-beta.8"
     },
     "extra": {
         "flarum-extension": {
             "title": "ReFlar Level Ranks",
             "icon": {
-                "name": "percent",
+                "name": "fas fa-percent",
                 "backgroundColor": "#263238",
                 "color": "#fff"
             }
