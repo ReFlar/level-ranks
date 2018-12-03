@@ -1,6 +1,7 @@
 <?php
 
 namespace ReFlar\LevelRanks\Listeners;
+
 use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -55,4 +56,4 @@ class LoadSettingsFromDatabase
             }
         }
     }
-};
+}
