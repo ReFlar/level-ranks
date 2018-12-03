@@ -1,5 +1,5 @@
 {
-    "name": "@reflar/enso-theme",
+    "name": "@reflar/level-ranks",
     "version": "0.0.0",
     "dependencies": {
       "flarum-webpack-config": "^0.1.0-beta.8",

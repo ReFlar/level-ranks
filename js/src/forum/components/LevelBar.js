@@ -19,7 +19,7 @@ export default class LevelBar extends Component {
 
         return (
             <div class="PostUser-level" title={expTotal + ' EXP'}>
-                <div class="PostUser-levelNumber">{pointsText + ' ' + expLevel}</div>
+                <div class="PostUser-levelNumber">{pointsText} {expLevel}</div>
                 <div class="PostUser-bar PostUser-bar--empty"></div>
                 <div class="PostUser-bar" style={"width: " + expPercent + '%;'}></div>
             </div>
