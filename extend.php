@@ -12,8 +12,10 @@
  */
 
 namespace Reflar\LevelRanks;
+
 use Flarum\Extend;
 use Illuminate\Contracts\Events\Dispatcher;
+
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
@@ -23,5 +25,5 @@ return [
     new Extend\Locales(__DIR__.'/resources/locale'),
     function (Dispatcher $events) {
         $events->subscribe(Listeners\LoadSettingsFromDatabase::class);
-    },
+    }
 ];

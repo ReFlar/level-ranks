@@ -1,9 +1,11 @@
 <?php
+
 namespace ReFlar\LevelRanks\Listeners;
 use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
+
 class LoadSettingsFromDatabase
 {
     /**
@@ -14,12 +16,13 @@ class LoadSettingsFromDatabase
      * @var array
      */
     protected $fieldsToGet = [
-        'pointsText'
+        'pointsText',
     ];
     /**
      * @var SettingsRepositoryInterface
      */
     protected $settings;
+
     /**
      * LoadSettingsFromDatabase constructor.
      *
@@ -29,6 +32,7 @@ class LoadSettingsFromDatabase
     {
         $this->settings = $settings;
     }
+
     /**
      * @param Dispatcher $events
      */
@@ -36,6 +40,7 @@ class LoadSettingsFromDatabase
     {
         $events->listen(Serializing::class, [$this, 'prepareApiAttributes']);
     }
+
     /**
      * @param Serializing $event
      */
@@ -50,4 +55,4 @@ class LoadSettingsFromDatabase
             }
         }
     }
-}
+};
