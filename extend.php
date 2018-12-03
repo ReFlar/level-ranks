@@ -12,10 +12,11 @@
  */
 
 namespace Reflar\LevelRanks;
+
 use Flarum\Extend;
-use Illuminate\Contracts\Events\Dispatcher;
+
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
-        ->css(__DIR__.'/resources/less/forum.less')
+        ->css(__DIR__.'/resources/less/forum.less'),
 ];
