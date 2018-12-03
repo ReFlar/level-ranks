@@ -10,16 +10,6 @@ use Illuminate\Contracts\Events\Dispatcher;
 class LoadSettingsFromDatabase
 {
     /**
-     * @var string
-     */
-    protected $packagePrefix = 'reflar-level-ranks.';
-    /**
-     * @var array
-     */
-    protected $fieldsToGet = [
-        'pointsText',
-    ];
-    /**
      * @var SettingsRepositoryInterface
      */
     protected $settings;
@@ -47,13 +37,7 @@ class LoadSettingsFromDatabase
      */
     public function prepareApiAttributes(Serializing $event)
     {
-        if ($event->isSerializer(ForumSerializer::class)) {
-            foreach ($this->fieldsToGet as $field) {
-                $value = $this->settings->get($this->packagePrefix.$field);
-                if (isset($value) && !empty($value)) {
-                    $event->attributes[$this->packagePrefix.$field] = $this->settings->get($this->packagePrefix.$field);
-                }
-            }
-        }
+        $key = 'reflar-level-ranks.pointsText';
+        $event->attributes[$key] = $this->settings->get($key);
     }
 }
