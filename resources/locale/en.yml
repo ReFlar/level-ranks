@@ -1,0 +1,5 @@
+reflar-level-ranks:
+  admin:
+    settings:
+      title: Level Ranks Settings
+      levelText: Enter the text for users points.
