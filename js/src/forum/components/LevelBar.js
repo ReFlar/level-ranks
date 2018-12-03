@@ -1,4 +1,5 @@
 import Component from 'flarum/Component';
+import app from 'flarum/app';
 
 export default class LevelBar extends Component {
     config() {
@@ -7,6 +8,7 @@ export default class LevelBar extends Component {
 
     view() {
         const user = this.props.post.user();
+        const pointsText = app.forum.attribute('reflar-level-ranks.pointsText');
 
         let expComments = (user.commentCount() - user.discussionCount()) * 21,
             expDiscussions = user.discussionCount() * 33;
@@ -17,7 +19,11 @@ export default class LevelBar extends Component {
 
         return (
             <div class="PostUser-level" title={expTotal + ' EXP'}>
-                <div class="PostUser-levelNumber">Level {expLevel}</div>
+                <span class="PostUser-text">
+                    <span class="PostUser-levelText">{pointsText}</span>
+                    &nbsp;
+                    <span class="PostUser-levelPoints">{expLevel}</span>
+                </span>
                 <div class="PostUser-bar PostUser-bar--empty"></div>
                 <div class="PostUser-bar" style={"width: " + expPercent + '%;'}></div>
             </div>
