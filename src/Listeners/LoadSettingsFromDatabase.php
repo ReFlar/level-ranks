@@ -10,16 +10,6 @@ use Illuminate\Contracts\Events\Dispatcher;
 class LoadSettingsFromDatabase
 {
     /**
-     * @var string
-     */
-    protected $packagePrefix = 'reflar-level-ranks.';
-    /**
-     * @var array
-     */
-    protected $fieldsToGet = [
-        'pointsText',
-    ];
-    /**
      * @var SettingsRepositoryInterface
      */
     protected $settings;
