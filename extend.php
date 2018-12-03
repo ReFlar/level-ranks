@@ -1,14 +1,14 @@
 <?php
 
-/**
- *  This file is part of reflar/level-ranks.
+/*
+ * This file is part of reflar/level-ranks.
  *
- *  Copyright (c) ReFlar.
+ * Copyright (c) ReFlar.
  *
- *  http://reflar.io
+ * https://reflar.redevs.org
  *
- *  For the full copyright and license information, please view the license.md
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Reflar\LevelRanks;

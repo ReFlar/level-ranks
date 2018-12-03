@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * This file is part of reflar/level-ranks.
+ *
+ * Copyright (c) ReFlar.
+ *
+ * https://reflar.redevs.org
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ReFlar\LevelRanks\Listeners;
 
 use Flarum\Api\Event\Serializing;
