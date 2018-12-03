@@ -2,4 +2,4 @@ reflar-level-ranks:
   admin:
     settings:
       title: Level Ranks Settings
-      levelText: Enter the text for users points.
+      levelText: Enter the text to be displayed for the points (e.g. Rank, Level)

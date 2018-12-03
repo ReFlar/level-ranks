@@ -132,6 +132,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var flarum_Component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/Component */ "flarum/Component");
 /* harmony import */ var flarum_Component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_Component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/app */ "flarum/app");
+/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -154,6 +157,7 @@ function (_Component) {
 
   _proto.view = function view() {
     var user = this.props.post.user();
+    var pointsText = flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.forum.attribute('reflar-level-ranks.pointsText');
     var expComments = (user.commentCount() - user.discussionCount()) * 21,
         expDiscussions = user.discussionCount() * 33;
     var expTotal = expComments + expDiscussions,
@@ -164,7 +168,7 @@ function (_Component) {
       title: expTotal + ' EXP'
     }, m("div", {
       class: "PostUser-levelNumber"
-    }, "Level ", expLevel), m("div", {
+    }, pointsText + ' ' + expLevel), m("div", {
       class: "PostUser-bar PostUser-bar--empty"
     }), m("div", {
       class: "PostUser-bar",

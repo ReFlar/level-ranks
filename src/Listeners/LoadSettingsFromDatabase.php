@@ -14,7 +14,7 @@ class LoadSettingsFromDatabase
      * @var array
      */
     protected $fieldsToGet = [
-        'levelText'
+        'pointsText'
     ];
     /**
      * @var SettingsRepositoryInterface

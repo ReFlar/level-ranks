@@ -14,7 +14,7 @@ export default class LevelRanksSettingsModal extends SettingsModal {
             <div className="Form-group">
                 <div className="Form-group">
                     <label>{app.translator.trans('reflar-level-ranks.admin.settings.levelText')}</label>
-                    <textarea required className="FormControl" bidi={this.setting('reflar-level-ranks.levelText')} />
+                    <input required className="FormControl" bidi={this.setting('reflar-level-ranks.pointsText')} />
                 </div>
             </div>
         ];

@@ -96,7 +96,7 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/forum */ "./src/forum/index.js");
+/* harmony import */ var _src_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/admin */ "./src/admin/index.js");
 /* empty/unused harmony star reexport */
 
 /***/ }),
@@ -119,69 +119,63 @@ function _inheritsLoose(subClass, superClass) {
 
 /***/ }),
 
-/***/ "./src/forum/components/LevelBar.js":
-/*!******************************************!*\
-  !*** ./src/forum/components/LevelBar.js ***!
-  \******************************************/
+/***/ "./src/admin/components/LevelRanksSettingsModal.js":
+/*!*********************************************************!*\
+  !*** ./src/admin/components/LevelRanksSettingsModal.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LevelBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LevelRanksSettingsModal; });
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var flarum_Component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/Component */ "flarum/Component");
-/* harmony import */ var flarum_Component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_Component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/components/SettingsModal */ "flarum/components/SettingsModal");
+/* harmony import */ var flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
-var LevelBar =
+var LevelRanksSettingsModal =
 /*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(LevelBar, _Component);
+function (_SettingsModal) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(LevelRanksSettingsModal, _SettingsModal);
 
-  function LevelBar() {
-    return _Component.apply(this, arguments) || this;
+  function LevelRanksSettingsModal() {
+    return _SettingsModal.apply(this, arguments) || this;
   }
 
-  var _proto = LevelBar.prototype;
+  var _proto = LevelRanksSettingsModal.prototype;
 
-  _proto.config = function config() {
-    this.$().tooltip({
-      container: 'body'
-    });
+  _proto.className = function className() {
+    return 'LevelRanksSettingsModal Modal--medium';
   };
 
-  _proto.view = function view() {
-    var user = this.props.post.user();
-    var expComments = (user.commentCount() - user.discussionCount()) * 21,
-        expDiscussions = user.discussionCount() * 33;
-    var expTotal = expComments + expDiscussions,
-        expLevel = Math.floor(expTotal / 135),
-        expPercent = 100 / 135 * (expTotal - expLevel * 135);
-    return m("div", {
-      class: "PostUser-level",
-      title: expTotal + ' EXP'
+  _proto.title = function title() {
+    return app.translator.trans('reflar-level-ranks.admin.settings.title');
+  };
+
+  _proto.form = function form() {
+    return [m("div", {
+      className: "Form-group"
     }, m("div", {
-      class: "PostUser-levelNumber"
-    }, "Level ", expLevel), m("div", {
-      class: "PostUser-bar PostUser-bar--empty"
-    }), m("div", {
-      class: "PostUser-bar",
-      style: "width: " + expPercent + '%;'
-    }));
+      className: "Form-group"
+    }, m("label", null, app.translator.trans('reflar-level-ranks.admin.settings.levelText')), m("input", {
+      required: true,
+      className: "FormControl",
+      bidi: this.setting('reflar-level-ranks.pointsText')
+    })))];
   };
 
-  return LevelBar;
-}(flarum_Component__WEBPACK_IMPORTED_MODULE_1___default.a);
+  return LevelRanksSettingsModal;
+}(flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_1___default.a);
 
 
 
 /***/ }),
 
-/***/ "./src/forum/index.js":
+/***/ "./src/admin/index.js":
 /*!****************************!*\
-  !*** ./src/forum/index.js ***!
+  !*** ./src/admin/index.js ***!
   \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -190,31 +184,14 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/app */ "flarum/app");
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/extend */ "flarum/extend");
-/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/PostUser */ "flarum/components/PostUser");
-/* harmony import */ var flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_LevelBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/LevelBar */ "./src/forum/components/LevelBar.js");
+/* harmony import */ var _components_LevelRanksSettingsModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/LevelRanksSettingsModal */ "./src/admin/components/LevelRanksSettingsModal.js");
 
 
-
-
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('reflar-level-ranks', function (app) {
-  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_PostUser__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'view', function (view) {
-    view.children.push(_components_LevelBar__WEBPACK_IMPORTED_MODULE_3__["default"].component(this.props));
-  });
+flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('reflar-level-ranks', function () {
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionSettings['reflar-level-ranks'] = function () {
+    return flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.modal.show(new _components_LevelRanksSettingsModal__WEBPACK_IMPORTED_MODULE_1__["default"]());
+  };
 });
-
-/***/ }),
-
-/***/ "flarum/Component":
-/*!**************************************************!*\
-  !*** external "flarum.core.compat['Component']" ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['Component'];
 
 /***/ }),
 
@@ -229,25 +206,14 @@ module.exports = flarum.core.compat['app'];
 
 /***/ }),
 
-/***/ "flarum/components/PostUser":
-/*!************************************************************!*\
-  !*** external "flarum.core.compat['components/PostUser']" ***!
-  \************************************************************/
+/***/ "flarum/components/SettingsModal":
+/*!*****************************************************************!*\
+  !*** external "flarum.core.compat['components/SettingsModal']" ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = flarum.core.compat['components/PostUser'];
-
-/***/ }),
-
-/***/ "flarum/extend":
-/*!***********************************************!*\
-  !*** external "flarum.core.compat['extend']" ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['extend'];
+module.exports = flarum.core.compat['components/SettingsModal'];
 
 /***/ })
 
