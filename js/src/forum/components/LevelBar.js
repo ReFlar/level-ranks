@@ -18,7 +18,7 @@ export default class LevelBar extends Component {
             expPercent = (100 / 135) * ((expTotal) - (expLevel * 135));
 
         return (
-            <div class="PostUser-level" title={`${expTotal} ${app.translator.trans('reflar-level-ranks.admin.settings.levelText')}`}>
+            <div class="PostUser-level" title={`${expTotal} ${app.translator.trans('reflar-level-ranks.forum.desc.levelText')}`}>
                 <span class="PostUser-text">
                     <span class="PostUser-levelText">{pointsText}</span>
                     &nbsp;
