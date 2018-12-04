@@ -8,7 +8,7 @@ export default class LevelBar extends Component {
 
     view() {
         const user = this.props.post.user();
-        const pointsText = app.forum.attribute('reflar-level-ranks.pointsText');
+        const pointsText = app.forum.attribute('reflar-level-ranks.pointsText') || app.translator.trans('reflar-level-ranks.forum.desc.defaultText');
 
         let expComments = (user.commentCount() - user.discussionCount()) * 21,
             expDiscussions = user.discussionCount() * 33;
@@ -18,7 +18,7 @@ export default class LevelBar extends Component {
             expPercent = (100 / 135) * ((expTotal) - (expLevel * 135));
 
         return (
-            <div class="PostUser-level" title={expTotal + ' EXP'}>
+            <div class="PostUser-level" title={`${expTotal} ${app.translator.trans('reflar-level-ranks.admin.settings.levelText')}`}>
                 <span class="PostUser-text">
                     <span class="PostUser-levelText">{pointsText}</span>
                     &nbsp;
