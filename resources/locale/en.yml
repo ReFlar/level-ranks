@@ -6,5 +6,5 @@ reflar-level-ranks:
       defaultPlaceholder: Level
   forum:
     desc:
-      levelText: EXP
-      defaultText: Level
+      expText: EXP
+      levelText: Level
