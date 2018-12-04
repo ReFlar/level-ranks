@@ -2,9 +2,10 @@ reflar-level-ranks:
   admin:
     settings:
       title: Level Ranks Settings
-      levelText: Enter the text to be displayed for the points (e.g. Rank, Level)
-      defaultPlaceholder: Level
+      levelText: Enter the text to be displayed for the points (e.g. Rank, Level)=
   forum:
     desc:
       expText: EXP
-      levelText: Level
+  lib:
+    defaults:
+      level: Level
