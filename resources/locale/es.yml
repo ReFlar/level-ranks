@@ -1,0 +1,11 @@
+reflar-level-ranks:
+  admin:
+    settings:
+      title: Configuración de Puntos de Experiencia
+      levelText: Texto que será mostrado para los puntos (ej. Rango, Nivel)
+  forum:
+    desc:
+      expText: EXP
+  lib:
+    defaults:
+level: Puntos
