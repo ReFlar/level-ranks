@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ReFlar\LevelRanks\Listeners;
+namespace Reflar\LevelRanks\Listeners;
 
 use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
