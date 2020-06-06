@@ -7,7 +7,7 @@ export default class LevelBar extends Component {
     }
 
     view() {
-        const user = this.props.post.user();
+        const user = this.props.user;
         const pointsText = app.forum.attribute('reflar-level-ranks.pointsText') || app.translator.trans('reflar-level-ranks.lib.defaults.level');
 
         let expComments = (user.commentCount() - user.discussionCount()) * 21,
